@@ -4,7 +4,6 @@
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },  
-  "postCreateCommand": "apt update -y && apt install apt install -y tigervnc-standalone-server xvfb fluxbox novnc websockify",
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
