@@ -44,7 +44,7 @@ else:
         _s = mymodule.Screen()
         _s.exitonclick = lambda : None
         _s.screensize(canvwidth=SCREEN_WIDTH, canvheight=SCREEN_HEIGHT)
-        _s.setup(SCREEN_WIDTH+20,SCREEN_HEIGHT+20)
+        _s.setup(SCREEN_WIDTH+20,SCREEN_HEIGHT+20)        
         return _s
     
     # Manage the screen recording via pyvirtual display
