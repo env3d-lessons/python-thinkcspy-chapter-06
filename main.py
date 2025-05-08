@@ -48,9 +48,8 @@ def draw_carbons(t, num_carbons):
 
 
 # Exercise 3
-def draw_carbon_chain(num_carbons):
-    """Draws full CH₃–(CH₂)_n–CH₃ style carbon chain"""
-    t = turtle.Turtle()
+def draw_carbon_chain(t, num_carbons):
+    """Draws full CH₃–(CH₂)_n–CH₃ style carbon chain"""    
     t.speed(0)
     t.penup()
 
@@ -86,6 +85,58 @@ def draw_carbon_chain(num_carbons):
 
 
 
-wn = turtle.Screen()
-steve = turtle.Turtle()
-draw_carbon(steve)
+"""
+*** USER INTERFACE CODE - DO NOT MODIFY ***
+
+Below is the code to a Graphical User Interface.  You can use the buttons to 
+interact with each of the draw functions to check if you have
+implemented them correctly.
+"""
+
+import tkinter as tk
+from tkinter import simpledialog
+
+# GUI with Tkinter
+def main_gui():
+    root = tk.Tk()
+    root.title("Carbon Chain Drawer")
+
+    canvas = turtle.ScrolledCanvas(master=root)
+    canvas.pack()
+    global t    
+    t = turtle.RawTurtle(canvas)
+    t.hideturtle()
+
+    def clear_drawing():
+        t.clear()
+        t.penup()
+        t.goto(0, 0)
+
+    def call_draw_carbon():
+        clear_drawing()
+        draw_carbon(t)
+
+    def call_draw_carbons():
+        clear_drawing()
+        n = simpledialog.askinteger("Input", "How many CH₂ units?", minvalue=1)
+        if n:
+            draw_carbons(t, n)
+
+    def call_draw_chain():
+        clear_drawing()
+        n = simpledialog.askinteger("Input", "How many CH₂ units in chain (excluding ends)?", minvalue=0)
+        if n is not None:
+            draw_carbon_chain(t, n)
+
+    frame = tk.Frame(root)
+    frame.pack()
+
+    tk.Button(frame, text="Draw CH₂", command=call_draw_carbon).pack(side=tk.LEFT, padx=5)
+    tk.Button(frame, text="Draw (CH₂)n", command=call_draw_carbons).pack(side=tk.LEFT, padx=5)
+    tk.Button(frame, text="Draw Full Chain", command=call_draw_chain).pack(side=tk.LEFT, padx=5)
+    tk.Button(frame, text="Clear", command=clear_drawing).pack(side=tk.LEFT, padx=5)
+
+    root.mainloop()
+
+if __name__ == "__main__":
+    main_gui()
