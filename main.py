@@ -14,6 +14,8 @@ def draw_letter(turtle, letter):
     turtle.setx(turtle.xcor() + (font_width / 2))
     turtle.sety(turtle.ycor() + (height / 2))
 
+t = turtle.Turtle()
+draw_letter(t, 'C')
 
 # Exercise 1
 def draw_carbon(t):
@@ -85,6 +87,3 @@ def draw_carbon_chain(num_carbons):
     # Hide turtle and finish
     t.hideturtle()
     turtle.done()
-
-steve = turtle.Turtle()
-draw_carbon(steve)
