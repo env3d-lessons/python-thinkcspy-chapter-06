@@ -1,6 +1,6 @@
 {
   "name": "Python with desktop, disable copilot",
-  "image": "mcr.microsoft.com/devcontainers/universal:linux",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },   
