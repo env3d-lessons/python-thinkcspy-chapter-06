@@ -1,20 +1,17 @@
 {
-  "name": "Desktop Lite Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/universal:linux",
-  "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
-  },  
-  "forwardPorts": [6080],
-  "portsAttributes": {
-    "6080": {
-      "label": "desktop"
-    }
-  },
+  "name": "Python Development with XVFB",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "customizations": {
-  "vscode": {
-    "settings": {
-      "workbench.explorer.hiddenViews": ["workbench.view.extensions"]
+    "vscode": {
+      "extensions": [
+        "ms-python.python",  // Python extension
+        "ms-python.vscode-pylance"  // Pylance extension (optional, for better performance)
+      ],
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python" // Path to Python interpreter
+      }    
     }
   }
 }
-}
+  
