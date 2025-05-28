@@ -1,5 +1,3 @@
-import turtle
-
 # Constants for font size and spacing
 font_size = 20
 font_height = font_size
@@ -132,4 +130,5 @@ def main_gui():
     root.mainloop()
 
 if __name__ == "__main__":
+    import turtle
     main_gui()
