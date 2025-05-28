@@ -16,64 +16,27 @@ def draw_letter(t, letter):
 def draw_carbon(t):
     """Draws a single CH₂ group (Carbon with 2 Hydrogens)"""
 
-    # Draw C at the center
+    # Below we are simply calling draw_letter to draw the letters C and H
+    # You will need to modify this function to draw the CH₂ group correctly.
     draw_letter(t, 'C')
-
-    # Draw H to the top
-    t.left(90)  # Point up
-    t.penup()
-    t.forward(font_height)
-    t.pendown()
-    t.forward(font_height)
-    t.penup()
-    t.forward(font_height)
     draw_letter(t, 'H')
-    t.backward(font_height*4)
-    t.pendown()
-    t.backward(font_height)
-    t.penup()
-    t.backward(font_height)
-    t.penup()
-
-    # Draw H to the bottom
     draw_letter(t, 'H')
-    t.forward(font_height * 3)
-    t.right(90)
-    t.pendown()
 
 
 
 # Exercise 2
 def draw_carbons(t, num_carbons):
     """Draws a straight line of CH₂ groups (without extra Hs at ends)"""
-    for _ in range(num_carbons):
-        draw_carbon(t)
-        t.penup()
-        t.forward(font_width)
-        t.pendown()
-        t.forward(font_width)
-        t.penup()
-        t.forward(font_width)
+    # pass simply does nothing, you will need to replace it with your code.
+    pass
 
 
 # Exercise 3
 def draw_carbon_chain(t, num_carbons):
     """Draws full CH₃–(CH₂)_n–CH₃ style carbon chain"""    
+    # pass simply does nothing, you will need to replace it with your code.
+    pass
     
-    draw_letter(t, 'C')
-    t.penup()
-    t.forward(font_width)
-    t.pendown()
-    t.forward(font_width)
-    t.penup()
-    t.forward(font_width)
-
-    draw_carbons(t, num_carbons)
-
-    # Draw last carbon with 3 Hs
-    draw_letter(t, 'C')
-
-
 
 
 """
