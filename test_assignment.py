@@ -1,4 +1,3 @@
-import pytest
 from unittest.mock import MagicMock, patch
 from main import draw_carbon_chain, draw_carbons, draw_carbon
 
