@@ -2,7 +2,7 @@
   "name": "DevContainer with VNC and NoVNC",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {},
-  "postCreateCommand": ".devcontainer/install.sh",
+  "postCreateCommand": "bash .devcontainer/install.sh",
   "postStartCommand": "supervisord -c .devcontainer/desktop.conf",
   "forwardPorts": [6080],
   "otherPortsAttributes": {
