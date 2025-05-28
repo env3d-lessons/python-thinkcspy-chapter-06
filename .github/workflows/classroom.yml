@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Run pytest with verbose output
+      run: pytest -v -rA --tb=long -s
     - name: pytest
       id: pytest
       uses: classroom-resources/autograding-python-grader@v1
