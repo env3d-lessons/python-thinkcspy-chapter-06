@@ -1,4 +1,4 @@
-**Alkanes**
+## Alkanes
 
 In [organic chemistry](https://en.wikipedia.org/wiki/Organic_chemistry), an **alkane** consists of [hydrogen](https://en.wikipedia.org/wiki/Hydrogen) and [carbon](https://en.wikipedia.org/wiki/Carbon) atoms arranged in a [tree](https://en.wikipedia.org/wiki/Tree_\(graph_theory\)) structure (from wikipedia). Alkanes have the general chemical formula [C](https://en.wikipedia.org/wiki/Carbon)n[H](https://en.wikipedia.org/wiki/Hydrogen)2n+2 and the first few are summarized in the table below. You have likely heard of a few of them. Here are the first few:
 
@@ -23,3 +23,26 @@ python main.py
 ```
 
 This will create a GUI which can be accessed under "PORTS" tab in codespaces, similar to the lab 2 challenge.
+
+Below is a quick screen capture on how to use the GUI, there are a couple of differences between this and the lab 2 challenge. 
+
+- Each button of the GUI correspond to a different function call, so you can test each function independently.
+- You need to click the 'X' at the upper right corner of the GUI to close it, rather than using Ctrl+C in the terminal.
+
+![Alkanes GUI](images/output.gif)
+
+## Submit
+
+As before, run pytest to check your code. You can run the tests using the following command:
+
+```bash
+pytest
+```
+
+Once you are ready, submit using the following command:
+
+```bash
+git add -A
+git commit -m 'submit'
+git push
+```
