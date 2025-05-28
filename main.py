@@ -84,11 +84,11 @@ interact with each of the draw functions to check if you have
 implemented them correctly.
 """
 
-import tkinter as tk
-from tkinter import simpledialog
-
 # GUI with Tkinter
 def main_gui():
+    import tkinter as tk
+    from tkinter import simpledialog
+
     root = tk.Tk()
     root.title("Carbon Chain Drawer")
 

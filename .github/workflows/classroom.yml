@@ -13,12 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest
-    - name: Run pytest with verbose output
-      run: pytest -v -rA --tb=long -s
     - name: pytest
       id: pytest
       uses: classroom-resources/autograding-python-grader@v1
