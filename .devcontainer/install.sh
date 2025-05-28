@@ -19,4 +19,3 @@ sudo tee /usr/share/novnc/index.html > /dev/null <<EOF
 </html>
 EOF
 
-pip install pygame
