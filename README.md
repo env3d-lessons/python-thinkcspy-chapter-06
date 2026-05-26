@@ -22,9 +22,9 @@ To run the code, you will execute the `main.py` file using the following command
 python main.py
 ```
 
-This will create a GUI which can be accessed under "PORTS" tab in codespaces, similar to the lab 2 challenge.
+This will create a GUI which can be accessed under "PORTS" tab in codespaces.
 
-Below is a quick screen capture on how to use the GUI, there are a couple of differences between this and the lab 2 challenge. 
+Below is a quick screen capture on how to use the GUI. 
 
 - Each button of the GUI correspond to a different function call, so you can test each function independently.
 - You need to click the 'X' at the upper right corner of the GUI to close it, rather than using Ctrl+C in the terminal.
